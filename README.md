@@ -2,6 +2,13 @@
 
 Base URL for the API server is: https://api.keyvalue.xyz 
 
+| Method | Endpoint                  |
+|--------|---------------------------|
+| POST   |  `/new/{key}`             |
+| POST   |  `/{token}/{key}/{value}` |
+| GET    | `/{token}/{key}`          |
+
+
 ---
 ## POST `/new/{key}`
 ### Explanation
@@ -15,8 +22,9 @@ This API is used to create new `{key}` and if the request is successfull it retu
 ### Response
 | Code  | Body                                    | Notes                                  |
 |-------|-----------------------------------------|----------------------------------------|
-| `400` |                                         | Error occurred during new key creation                                       |
 | `200` | `https://api.keyvalue/xyz/{token}/{key}` |  |
+| `400` |                                         | Error occurred during new key creation                                       |
+
 
 
 ### Example
@@ -47,8 +55,8 @@ This API is used to set value for the `{key}` and if the request is successfull 
 ### Response
 | Code  | Body                                    | Notes                                  |
 |-------|-----------------------------------------|----------------------------------------|
-| `400` |  |                                       |
 | `200` |  | `{value}` is successfully saved   |
+| `400` |  |                                       |
 
 ### Example
 ```
@@ -83,8 +91,9 @@ This API is used to get the value for the `{key}`
 ### Response
 | Code  | Body                                    | Notes                                  |
 |-------|-----------------------------------------|----------------------------------------|
-| `400` |  |                                       |
 | `200` |  `{value}` |   |
+| `400` |  |                                       |
+
 
 ### Example
 ---
