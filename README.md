@@ -8,9 +8,10 @@ Base URL for the API server is: https://api.keyvalue.xyz
 | [POST](#post-tokenkeyvalue)   |  [`/{token}/{key}/{value}`](#post-tokenkeyvalue) |
 | [GET](#get-tokenkey)    | [`/{token}/{key}`](#get-tokenkey)           |
 
-
 ---
+
 ## POST `/new/{key}`
+
 ### Explanation
 This API is used to create new `{key}` and if the request is successfull it returns new `{token}` and `{key}`.
 
@@ -24,8 +25,6 @@ This API is used to create new `{key}` and if the request is successfull it retu
 |-------|-----------------------------------------|----------------------------------------|
 | `200` | `https://api.keyvalue/xyz/{token}/{key}` |  |
 | `400` |                                         | Error occurred during new key creation                                       |
-
-
 
 ### Example
 ```
@@ -44,13 +43,11 @@ HTTP/1.1 400 Bad Request
 This API is used to set value for the `{key}` and if the request is successfull `{value}` is stored.
 
 ### Parameters
-
 | Description | Limit     | Encoding | Notes                                                              |
 |-------------|-----------|----------|--------------------------------------------------------------------|
 | `{token}`     | 100 bytes | UTF-8    | Cannot contain: `. $ # [ ] /` ASCII control characters 0-31 or 127 |
 | `{key}`   | 100 bytes | UTF-8    | Cannot contain: `. $ # [ ] /` ASCII control characters 0-31 or 127 |
 | `{value}`   | 1mb | UTF-8    | Cannot contain: `. $ # [ ] /` ASCII control characters 0-31 or 127 |
-
 
 ### Response
 | Code  | Body                                    | Notes                                  |
@@ -73,20 +70,18 @@ HTTP/1.1 400 Bad Request
 ...
 
 ```
-
 ---
+
 ## GET `/{token}/{key}`
 
 ### Explanation
 This API is used to get the value for the `{key}`
 
 ### Parameters
-
 | Description | Limit     | Encoding | Notes                                                              |
 |-------------|-----------|----------|--------------------------------------------------------------------|
 | `{token}`     | 100 bytes | UTF-8    | Cannot contain: `. $ # [ ] /` ASCII control characters 0-31 or 127 |
 | `{key}`   | 100 bytes | UTF-8    | Cannot contain: `. $ # [ ] /` ASCII control characters 0-31 or 127 |
-
 
 ### Response
 | Code  | Body                                    | Notes                                  |
@@ -94,9 +89,7 @@ This API is used to get the value for the `{key}`
 | `200` |  `{value}` |   |
 | `400` |  |                                       |
 
-
 ### Example
----
 ```
 curl https://api.keyvalue.xyz/7d8cd2b1/key
 value
@@ -107,4 +100,4 @@ HTTP/1.1 400 Bad Request
 ...
 
 ```
-
+---
