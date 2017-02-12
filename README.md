@@ -4,9 +4,9 @@ Base URL for the API server is: https://api.keyvalue.xyz
 
 | Method | Endpoint                  |
 |--------|---------------------------|
-| POST   |  `/new/{key}`             |
-| POST   |  `/{token}/{key}/{value}` |
-| GET    | `/{token}/{key}`          |
+| [POST](#post-newkey)   |  [`/new/{key}`](#post-newkey)             |
+| [POST](#post-tokenkeyvalue)   |  [`/{token}/{key}/{value}`](#post-tokenkeyvalue) |
+| [GET](#get-tokenkey)    | [`/{token}/{key}`](#get-tokenkey)           |
 
 
 ---
