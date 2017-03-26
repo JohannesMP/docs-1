@@ -10,23 +10,23 @@ Base URL for the API server is: https://api.keyvalue.xyz
 
 ---
 
-## POST `/new/{key}`
+## POST `/new/{key}`
 
-### Explanation
+### Explanation
 This API is used to create new `{key}` and if the request is successfull it returns new `{token}` and `{key}`.
 
-### Parameters
+### Parameters
 | Description | Limit     | Encoding | Notes                                                              |
 |-------------|-----------|----------|--------------------------------------------------------------------|
 | `{key}`     | 100 bytes | UTF-8    | Cannot contain: `. $ # [ ] /` ASCII control characters 0-31 or 127 |
 
-### Response
+### Response
 | Code  | Body                                    | Notes                                  |
 |-------|-----------------------------------------|----------------------------------------|
 | `200` | `https://api.keyvalue/xyz/{token}/{key}` |  |
 | `400` |                                         | Error occurred during new key creation                                       |
 
-### Example
+### Example
 ```
 curl -X POST https://api.keyvalue.xyz/new/key
 https://api.keyvalue.xyz/7d8cd2b1/key
@@ -37,25 +37,25 @@ HTTP/1.1 400 Bad Request
 ```
 ---
 
-## POST `/{token}/{key}/{value}`
+## POST `/{token}/{key}/{value}`
 
-### Explanation
+### Explanation
 This API is used to set value for the `{key}` and if the request is successfull `{value}` is stored.
 
-### Parameters
+### Parameters
 | Description | Limit     | Encoding | Notes                                                              |
 |-------------|-----------|----------|--------------------------------------------------------------------|
 | `{token}`     | 100 bytes | UTF-8    | Cannot contain: `. $ # [ ] /` ASCII control characters 0-31 or 127 |
 | `{key}`   | 100 bytes | UTF-8    | Cannot contain: `. $ # [ ] /` ASCII control characters 0-31 or 127 |
 | `{value}`   | 1mb | UTF-8    | Cannot contain: `. $ # [ ] /` ASCII control characters 0-31 or 127 |
 
-### Response
+### Response
 | Code  | Body                                    | Notes                                  |
 |-------|-----------------------------------------|----------------------------------------|
 | `200` |  | `{value}` is successfully saved   |
 | `400` |  |                                       |
 
-### Example
+### Example
 ```
 curl -X POST -IL https://api.keyvalue.xyz/7d8cd2b1/key/value
 HTTP/1.1 200 OK
@@ -72,24 +72,24 @@ HTTP/1.1 400 Bad Request
 ```
 ---
 
-## GET `/{token}/{key}`
+## GET `/{token}/{key}`
 
-### Explanation
+### Explanation
 This API is used to get the value for the `{key}`
 
-### Parameters
+### Parameters
 | Description | Limit     | Encoding | Notes                                                              |
 |-------------|-----------|----------|--------------------------------------------------------------------|
 | `{token}`     | 100 bytes | UTF-8    | Cannot contain: `. $ # [ ] /` ASCII control characters 0-31 or 127 |
 | `{key}`   | 100 bytes | UTF-8    | Cannot contain: `. $ # [ ] /` ASCII control characters 0-31 or 127 |
 
-### Response
+### Response
 | Code  | Body                                    | Notes                                  |
 |-------|-----------------------------------------|----------------------------------------|
 | `200` |  `{value}` |   |
 | `400` |  |                                       |
 
-### Example
+### Example
 ```
 curl https://api.keyvalue.xyz/7d8cd2b1/key
 value
