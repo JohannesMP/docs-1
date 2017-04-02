@@ -58,11 +58,11 @@ This API is used to set value for the `{key}` and if the request is successful `
 
 ### Example
 ```
-curl -X POST  https://api.keyvalue.xyz/babf221a/key --data '{ Datacenter: dc1, Service: kvaas}'
+curl -X POST  https://api.keyvalue.xyz/3dc51064/key --data '{ Datacenter: dc1, Service: kvaas}'
 HTTP/1.1 200 OK
 ...
 
-curl -X POST -IL https://api.keyvalue.xyz/7d8cd2b1/key/
+curl -X POST -IL https://api.keyvalue.xyz/3dc51064/key/
 HTTP/1.1 400 Bad Request
 ...
 
