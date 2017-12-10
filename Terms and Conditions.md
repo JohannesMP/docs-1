@@ -3,7 +3,7 @@
 
 *Last updated: April 22, 2017*
 
-Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using the keyvalue.xyz website (the "Service") operated by Condicon, Inc. ("us", "we", or "our").
+Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using the keyvalue.xyz website (the "Service") operated by Condicon, B.V. ("us", "we", or "our").
 Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.
 By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.
 
@@ -30,7 +30,7 @@ All provisions of the Terms which by their nature should survive termination sha
 
 #### Governing Law
 
-These Terms shall be governed and construed in accordance with the laws of U.S., without regard to its conflict of law provisions.
+These Terms shall be governed and construed in accordance with the laws of Dutch., without regard to its conflict of law provisions.
 Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have between us regarding the Service.
 
 #### Changes
