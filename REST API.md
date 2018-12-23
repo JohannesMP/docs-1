@@ -154,9 +154,6 @@ OK
 ```
 ---
 
----
-
-
 ## GET `/timestamp`
 
 ### Explanation
@@ -172,3 +169,4 @@ This API is used to get timestamp
 curl https://api.keyvalue.xyz/timestamp
 1545600234
 ```
+---
