@@ -8,6 +8,8 @@ Base URL for the API server is: https://api.keyvalue.xyz
 | [POST](#post-tokenkeyvalue)   |  [`/{token}/{key}`](#post-tokenkey) |
 | [POST](#post-tokenkeyvalue)   |  [`/{token}/{key}/{value}`](#post-tokenkeyvalue) |
 | [GET](#get-tokenkey)    | [`/{token}/{key}`](#get-tokenkey)           |
+| [GET](#get-ping)    | [`/ping`](#get-ping)           |
+| [GET](#get-timestamp)    | [`/timestamp`](#get-timestamp)           |
 
 ---
 
@@ -133,3 +135,40 @@ HTTP/1.1 400 Bad Request
 
 ```
 ---
+
+
+## GET `/ping`
+
+### Explanation
+This API is used to ping API server
+
+### Response
+| Code  | Body                                    | Notes                                  |
+|-------|-----------------------------------------|----------------------------------------|
+| `200` |  OK |   |
+
+### Example
+```
+curl https://api.keyvalue.xyz/ping
+OK
+```
+---
+
+---
+
+
+## GET `/timestamp`
+
+### Explanation
+This API is used to get timestamp
+
+### Response
+| Code  | Body                                    | Notes                                  |
+|-------|-----------------------------------------|----------------------------------------|
+| `200` |  UNIX timestamp |   |
+
+### Example
+```
+curl https://api.keyvalue.xyz/timestamp
+1545600234
+```
