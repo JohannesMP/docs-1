@@ -26,7 +26,7 @@ This API is used to create new `{key}` and if the request is successful it retur
 ### Response
 | Code  | Body                                    | Notes                                  |
 |-------|-----------------------------------------|----------------------------------------|
-| `200` | `https://api.keyvalue/xyz/{token}/{key}` |  |
+| `200` | `https://api.keyvalue.xyz/{token}/{key}` |  |
 | `400` |                                         | Error occurred during new key creation                                       |
 
 ### Example
